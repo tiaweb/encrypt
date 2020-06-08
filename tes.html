@@ -6162,11 +6162,11 @@
         return decrypted;
     }
 
-    document.getElementById('staticrypt-form').addEventListener('submit', function(e) {
+    document.getElementById('tiaweb-form').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = 'e712d56abb466d3576b1ed1f15793f8d73b53588b768b59cb83f29a619edc493b2390f5b6147884fb95eef118fd0189b384129b7c0cda781b988abafb4c10337q9TZCqsGJx2x4r6q6yrBocuOWcFZwuhSIucB+cGepDDmNsRjHELJ+wr/AHdB8YcuZW4DBk/u78lroqggP+Y4Mb1sgzquocZA/G5qLhan+VtgpTAwofH3xFo+rCKE5/Ah0YJRjpeXbDKQYBtQfAfGnnl1OtI8UfB2tHj9grCNyVxHYk7LjP8RuhBmMRjemxNPr/V+I/n6/3u59TQXygzSKJM19iCIpUlqboegrJlG3DYJOrk/BM8aOzGBFfwszOjDcDSUBZIp2+NjNfMSSo9KAQPTtMnVakBHUKtjvfcGxXAvdVZaI132V0Z04qpfftmTWywCGsUkywUBabuoWet4f2RGcgVV+asaMPDvmrLkwJ6jJT0IrMWx6r6c9i2HHjmXKX6yjx3o26yUin3zEm7TgJBb022TWj2CxhdP58b5torN8baTwX6/WJWP7gw3EhELaWLAH3QGVx6w4Bcq+HM4ZGi3UFeQdtg7SHwmO8ySKYZFJeS6xwYrByLzcnO3R+BdLRiBPLlx0/uKltmLcU44H965UxUbfGgc5TvxxPkQy1+605guNTlgaK3N2DHNkzU/93bxax9r1S3m8Er005FjEGoJ0BWow3r4PSkh6QmwNzfvGqBY+YRq9H1jigcclIe0JQxRisGiKNvPAceDs46WqegHsuw5Uln5YfmxITKvGx+9X7rmzmmiMaPsc4vVbEqtysDn0fm51sm9LoomFF14+x0Adswe+ZqPKzbMmX4Zr+e0LiMuRjHasa+C0fngpkjl',
+        var passphrase = document.getElementById('tiaweb-password').value,
+            encryptedMsg = '0a80a9ac54a7226be14278f30c58a5523af00c88dfd3716f3cdae36608f2448a2f6bdd79ca3384e361069b5e6c6b326ea503f6bf331f862d2cd4d95ad27cb58f2Ss9yd62vmk/X6RIDWDOSUonnDrS0cIdv5fTlFjlIzjb+KnLzk1fd+f3xpwGvAF3xrdcn6FdhDkAuZdltgRjL4egnvbjxj4awrSj5JISmqNtJ8RNxv+sO8+AZCDhY8MNlL+OcOwLdL0T10fToWWkqb1RUhsJCitBv2s9jGjSvgy+BkgAHt1ehoR/uTBlbS3TWEXW0L+ckWbdralV52DmBR+7iSBOzubmq4OW1nqyBJTwgcVR5dD5MRu4iMdvS4cei47JIc5fXjG++ZUt8HeGxyLwrlgnbpuwF9PAyOdf5PmTx22lYaTckenUSd9eA0C080ncfm4V0dKmLlV/fbgpJ+g5Otg05Tr6UW4genPfbNCcHgrs+eWbetfdlx2RXiKWh3pYSlgoxr13iG5cQOIahP8HGmKZH5cBPsQsa1BRTinkXVpp1hLaKhw+Pb4G7sP4OwguyNJkI41iSSIFdSN0kxGTnRke98bd9ndcYTPrDoRnhM36ivmg7onAL21AJCMwbDra8T7AMdg19rOH75hNW4xmdYYbLrkxh+Jo+Lz5QRv2gsQpxhq5PqPfwP4jZiKLaSeVsH5UaXJuR18/vC+BfcWV0hU8FbhwG0iGBnUHTBWphs1hOYLcJIni2Z8Dng4R9qOcI/cDCEBTcZ3uDxc502nC9VdI6tf8E4DrC0ynHqco/kuSNNxHa6Cd23/mOSqm9OlO/T7LUKqruivzyqvX4t/ZrjLw7I1Z1FQVJkCSFnMwKJkvq3LiKURvZUmNHneJ',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
