@@ -1,16 +1,16 @@
 {
-  "name": "staticrypt",
+  "name": "tiaweb",
   "version": "1.3.2",
-  "description": "Based on the [crypto-js](https://github.com/brix/crypto-js) library, StatiCrypt uses AES-256 to encrypt your input with your passphrase and put it in a HTML file with a password prompt that can decrypted in-browser (client side).",
+  "description": "Based on the [crypto-js](https://github.com/brix/crypto-js) library, tiaweb uses AES-256 to encrypt your input with your passphrase and put it in a HTML file with a password prompt that can decrypted in-browser (client side).",
   "main": "index.js",
   "bin": {
-    "staticrypt": "./index.js"
+    "tiaweb": "./index.js"
   },
   "dependencies": {
     "crypto-js": ">=3.1.9-1",
     "yargs": ">=10.0.3"
   },
-  "author": "Robin Moisson (https://github.com/robinmoisson)",
+  "author": "Tiaweb (https://github.com/tiaweb)",
   "contributors": [
     "Aaron Coplan (https://github.com/AaronCoplan)"
   ],
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robinmoisson/staticrypt.git"
+    "url": "git+https://github.com/tiaweb/encrypt.git"
   },
   "keywords": [
     "static",
@@ -32,7 +32,7 @@
     "encryption"
   ],
   "bugs": {
-    "url": "https://github.com/robinmoisson/staticrypt/issues"
+    "url": "https://github.com/tiaweb/encrypt/issues"
   },
-  "homepage": "https://github.com/robinmoisson/staticrypt#readme"
+  "homepage": "https://github.com/tiaweb/encrypt#readme"
 }
