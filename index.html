@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>StatiCrypt: Password protect static HTML</title>
+    <title>Tiaweb EnCrypt: Password protect static HTML</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
@@ -30,16 +30,7 @@
     
     
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-73629908-2', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+    
     
    </head>
 
@@ -58,50 +49,34 @@
     <div class="row">
         <div class="col-xs-12">
             <h1>
-                StatiCrypt
+                Tiaweb encrypt
                 <div class="pull-right">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=robinmoisson&repo=staticrypt&type=star&size=large"
-                            frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=robinmoisson&repo=staticrypt&type=fork&size=large"
-                            frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
+                    Demo
                 </div>
                 <br>
-                <small>Password protect a static HTML page</small>
+                <small>Kata sandi melindungi halaman HTML statis</small>
             </h1>
             <p>
-                Based on the <a href="https://github.com/brix/crypto-js">crypto-js library</a>, StatiCrypt uses AES-256
-                to encrypt your string with your passphrase in your browser (client side).
-            </p>
-            <p>
-                Download your encrypted string in a HTML page with a password prompt you can upload anywhere (see <a
+                Berdasarkan <a href="https://github.com/brix/crypto-js">StatiCrypt</a> menggunakan AES-256 untuk mengenkripsi string Anda dengan frasa sandi Anda di browser Anda (sisi klien).
+<br/>
+Unduh string terenkripsi Anda di halaman HTML dengan prompt kata sandi yang dapat Anda unggah di mana saja  (see <a
                     target="_blank" href="example.html">example</a>).
             </p>
-            <p>
-                The tool is also available as <a href="https://npmjs.com/package/staticrypt">a CLI on NPM</a>.
-            </p>
+            
+            
             <br>
 
-            <h4><a class="no-style" id="toggle-concept" href="#">HOW IT WORKS ►</a></h4>
+            <h4><a class="no-style" id="toggle-concept" href="#">BAGAIMANA CARA KERJA (Tiaweb encrypt) ►</a></h4>
             <div id="concept" class="hidden">
-                <p>
-                    <b class="text-danger">Disclaimer</b> if you have extra sensitive banking data, you should probably
-                    use something else!
-                </p>
-                <p>
-                    StatiCrypt generates a static, password protected page that can be decrypted in-browser:
-                    just send or upload the generated page to a place serving static content (github pages, for example)
-                    and you're done: the javascript will prompt users for password, decrypt the page and load your HTML.
-                </p>
-                <p>
-                    It basically encrypts your page and puts everything with a user-friendly way to use a password
-                    in the new file.
-                    <br>AES-256 is state of the art but <b>brute-force/dictionary attacks would be trivial to
-                    do at a really fast pace: use a long, unusual passphrase!</b>
-                </p>
-                <p>
-                    Feel free to contribute or report any thought to the
-                    <a href="https://github.com/robinmoisson/staticrypt">GitHub project</a>!
-                </p>
+                
+                    <b class="text-danger"><p>Disclaimer</b></font> jika Anda memiliki data perbankan ekstra sensitif, Anda mungkin harus menggunakan sesuatu yang lain!</p>
+<br><p>
+Tiaweb encrypt menghasilkan halaman statis, kata sandi terlindungi yang dapat didekripsi di browser: cukup kirim atau unggah halaman yang dihasilkan ke tempat yang menyajikan konten statis (misalnya halaman Html) dan Anda selesai: javascript akan meminta pengguna untuk kata sandi, dekripsi halaman dan muat HTML Anda.</p><br/>
+<p>
+Ini pada dasarnya mengenkripsi halaman Anda dan menempatkan segala sesuatu dengan cara yang mudah digunakan untuk menggunakan kata sandi di file baru.</p><p>
+<b>AES-256</b> canggih, tetapi serangan <b>brute-force / dictionary</b> akan sepele untuk dilakukan dengan sangat cepat: gunakan frasa sandi yang panjang dan tidak biasa!</p>
+                
+                
             </div>
             <br>
         </div>
@@ -110,25 +85,25 @@
         <div class="col-xs-12">
             <form id="encrypt_form">
                 <div class="form-group">
-                    <label for="passphrase">Passphrase</label>
+                    <label for="passphrase">Kata Sandi</label>
                     <input type="password" class="form-control" id="passphrase"
                            placeholder="Passphrase (choose a long one!)">
                 </div>
                 <div class="form-group">
-                    <label for="unencrypted_html">HTML/string to encrypt</label>
+                    <label for="unencrypted_html">HTML / string untuk mengenkripsi</label>
                     <textarea class="form-control" id="unencrypted_html" placeholder="<html><head>..."
                               rows="5"></textarea>
                 </div>
                 <p>
-                    <a href="#" id="toggle-extra-option">+ More options</a>
+                    <a href="#" id="toggle-extra-option">+ Opsi lainya</a>
                 </p>
                 <div id="extra-options" class="hidden">
                     <div class="form-group">
-                        <label for="title">Page title</label>
+                        <label for="title">Judul halaman</label>
                         <input type="text" class="form-control" id="title" placeholder="Default: 'Protected Page'">
                     </div>
                     <div class="form-group">
-                        <label for="instructions">Instructions to display the user</label>
+                        <label for="instructions">Instruksi untuk menampilkan pengguna</label>
                         <textarea class="form-control" id="instructions" placeholder="Default: nothing."></textarea>
                     </div>
                 </div>
@@ -136,26 +111,26 @@
                 <div class="form-group">
                     <label class="no-style">
                         <input type="checkbox" id="embed-crypto" checked>
-                        Embed crypto-js into your file
+                        Sematkan crypto-js ke file Anda
                         <abbr title="Leave checked to include crypto-js into your file so you can decrypt it offline.
                         Uncheck to load crypto-js from a CDN (some adblockers might think it's a crypto miner).">?</abbr>
                     </label>
                 </div>
 
-                <button class="btn btn-primary pull-right" type="submit">Generate passphrase protected HTML</button>
+                <button class="btn btn-primary pull-right" type="submit">Buat HTML yang dilindungi kata sandi</button>
             </form>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12">
-            <h2>Encrypted HTML</h2>
+            <h2>HTML terenkripsi</h2>
             <p><a class="btn btn-success download"
                   download="encrypted.html"
                   id="download-link"
-                  disabled="disabled">Download html file with password prompt</a></p>
+                  disabled="disabled">Unduh file html dengan prompt kata sandi</a></p>
             <pre id="encrypted_html_display">
-Your encrypted string</pre>
+String terenkripsi Anda</pre>
         </div>
     </div></div>
 
