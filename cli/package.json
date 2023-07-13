@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "crypto-js": ">=3.1.9-1",
-    "yargs": ">=10.0.3"
+    "yargs": ">=17.7.2"
   },
   "author": "Tiaweb (https://github.com/tiaweb)",
   "contributors": [
